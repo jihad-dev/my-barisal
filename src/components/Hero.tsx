@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Play, Download, Star } from "lucide-react";
 import { stats } from "../data/services";
+import { Building, Ambulance, Droplets } from "lucide-react";
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -128,7 +129,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
                 className="glass-card rounded-xl p-4 md:p-6 gradient-border"
@@ -151,42 +152,21 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="relative mx-auto max-w-xs">
-              {/* <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl shadow-primary-500/10">
-                <div className="absolute top-6 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-800 rounded-full" />
-                <div className="w-full aspect-[9/19] bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2.5rem] overflow-hidden">
-              
-                  <div className="p-4 space-y-3">
-                    <div className="h-8 w-24 bg-gradient-to-r from-primary-500 to-primary-400 rounded-lg" />
-                    <div className="h-4 w-full bg-slate-700 rounded" />
-                    <div className="h-4 w-3/4 bg-slate-700/50 rounded" />
-                    <div className="grid grid-cols-3 gap-2 mt-4">
-                      {[...Array(10)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="aspect-square bg-slate-700/30 rounded-xl flex items-center justify-center"
-                        >
-                          <div className="w-8 h-8 rounded-full bg-slate-600/30" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>  */}
-              <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl shadow-primary-500/10 max-w-[360px] mx-auto">
-                {/* ফোনের উপরের Dynamic Island / Notch */}
+              {/* <div className="relative  rounded-[3rem] p-3  max-w-[360px] mx-auto">
+                
                 <div className="absolute top-6 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-800 rounded-full z-10" />
 
-                {/* স্ক্রিন কন্টেইনার */}
-                <div className="w-full aspect-[9/19] bg-slate-800 rounded-[2.5rem] overflow-hidden relative">
-                  {/* আপনার অ্যাপের UI ইমেজ */}
-                  <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/7e66d8242023175.Y3JvcCwzMjMyLDI1MjgsMCww.jpg" // এখানে আপনার ইমেজের লিংক বা পাথ দিন
-                    alt="App UI Screenshot"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
+             
+              </div> */}
+              {/* Screen containner */}
+              <div className="w-full aspect-[5/10] bg-slate-800 rounded-[2.5rem] overflow-hidden relative">
+                {/* Apnar apper UI image */}
+                <img
+                  src="../../public/hero.jpg" // image proper path
+                  alt="App UI Screenshot"
+                  className="w-full h-full object-cover" // change standard size image optimize object-contain
+                />
               </div>
-
               {/* Floating elements */}
               <motion.div
                 className="absolute -left-16 top-1/4 glass-card rounded-xl p-3 shadow-xl"
@@ -248,6 +228,3 @@ export default function Hero() {
     </section>
   );
 }
-
-// Import these at the top
-import { Building, Ambulance, Droplets } from "lucide-react";
