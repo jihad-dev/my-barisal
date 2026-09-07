@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Play, Download, Star } from "lucide-react";
 import { stats } from "../data/services";
 import { Building, Ambulance, Droplets } from "lucide-react";
-
+import heroImg from '../../public/hero.jpg';
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -152,19 +152,14 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="relative mx-auto max-w-xs">
-              {/* <div className="relative  rounded-[3rem] p-3  max-w-[360px] mx-auto">
-                
-                <div className="absolute top-6 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-800 rounded-full z-10" />
 
-             
-              </div> */}
               {/* Screen containner */}
               <div className="w-full aspect-[5/10] bg-slate-800 rounded-[2.5rem] overflow-hidden relative">
-                {/* Apnar apper UI image */}
+            
                 <img
-                  src="../../public/hero.jpg" // image proper path
+                  src={heroImg}
                   alt="App UI Screenshot"
-                  className="w-full h-full object-cover" // change standard size image optimize object-contain
+                  className="w-full h-full object-cover" 
                 />
               </div>
               {/* Floating elements */}
