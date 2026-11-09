@@ -185,14 +185,15 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <a
-              href="#download"
-              onClick={(e) => handleScrollTo(e, "#download")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-sm text-white bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 transition-all duration-300 shadow-md shadow-teal-500/20 hover:shadow-lg hover:shadow-teal-500/35 hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <Download size={16} className="animate-bounce" />
-              <span>অ্যাপ ডাউনলোড</span>
-            </a>
+          <a
+  href="https://play.google.com/store/apps/details?id=com.mybarisal.app&pcampaignid=web_share"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-sm text-white bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 transition-all duration-300 shadow-md shadow-teal-500/20 hover:shadow-lg hover:shadow-teal-500/35 hover:-translate-y-0.5 active:translate-y-0"
+>
+  <Download size={16} className="animate-bounce" />
+  <span>অ্যাপ ডাউনলোড</span>
+</a>
           </motion.div>
 
           {/* Mobile Menu Toggle Button */}
