@@ -110,13 +110,15 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <a
-              href="#download"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 group"
-            >
-              <Download size={20} className="group-hover:animate-bounce" />
-              <span>অ্যাপ ডাউনলোড করুন</span>
-            </a>
+        <a
+  href="https://play.google.com/store/apps/details?id=com.mybarisal.app&pcampaignid=web_share"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 group"
+>
+  <Download size={20} className="group-hover:animate-bounce" />
+  <span>অ্যাপ ডাউনলোড করুন</span>
+</a>
             
             <a
               href="#services"
